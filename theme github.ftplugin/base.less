@@ -1,0 +1,251 @@
+/* ============================================================== *
+ *  Theme for FoldingText 2.0
+ *
+ *  Author: Jamie Kowalski
+ *  Date:   November 2013 - July 2014
+ * ============================================================== */
+
+/* ============================================================== *
+ *  Variables
+ * ============================================================== */
+
+@monospaceFont: 'TheSansMono Office', Consolas, Menlo, monospace;
+@proportionalFont: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+@fontFamily: @proportionalFont;
+@fontSize: 16px; // FoldingText uses this setting on the body element
+@inkColor: #666666;
+@textColor: @inkColor;
+@deskColor: #FFFFFF;
+@paperColor: @deskColor;
+@keywordColor: mix(@textColor, @paperColor, 25%);
+
+// @lineHeight: 1.5;   // reducing line height interferes with .calc widget style
+@tabSize: 4;
+@selectionLeftFillTo: margin;
+@paperTopMargin: 2rem;
+@paperRightMargin: 2rem;
+@paperLeftMargin: 4rem;
+
+@codeFontSize: 95%;
+@codeFontFamily: @monospaceFont;
+@codeColor: black;
+@codeBackgroundColor: mix(transparent, @textColor, 98%);
+@codeBorder: 1px solid mix(transparent, @textColor, 93%);
+@codeBorderRadius: 6px;
+
+@tagBackgroundColor: @codeBackgroundColor;
+@tagBorder: @codeBorder;
+@tagBorderRadius: @codeBorderRadius;
+
+@interfaceColor: #CC0000;
+@cursorColor: @interfaceColor;
+
+/* ============================================================== *
+ *  General
+ * ============================================================== */
+
+body {
+  -webkit-font-smoothing: subpixel-antialiased !important;
+  text-rendering: optimizeSpeed; // this is set in FoldingText default
+  line-height: 1.5;
+}
+
+.CodeMirror {
+
+  .line-select-position {
+    margin-top: -3px;
+  }
+  .CodeMirror div.CodeMirror-textDropCursor { // textDropCursor is used when
+    // inserting dragged text
+    border-color: #333;
+  }
+  .CodeMirror div.CodeMirror-textDropCursor {
+    border-color: black;
+  }
+  .cm-selected-text {
+    color: rgb(256, 253, 240);
+  }
+}
+
+/* ============================================================== *
+ *  Lists
+ * ============================================================== */
+
+.cm-unordered,
+.cm-ordered {
+  padding-left: 1.8em !important;
+  line-height: 1.6 !important;
+  padding-bottom: .6em !important;
+}
+
+.cm-unordered .cm-list-bullet,
+.cm-ordered .cm-lead {
+  color: #000000 !important;
+  font-size: 20px;
+  line-height: 1.6 !important;
+  padding-right: 0.5em;
+}
+
+/* ============================================================== *
+ *  Headings
+ * ============================================================== */
+
+.CodeMirror {
+
+  .cm-heading {
+    color: #24292e;
+    position: relative;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-weight: 700;
+    line-height: 1.4;
+    cursor: text;
+  }
+  .cm-heading[cm-level="1"] {
+    padding-bottom: .3em;
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eeeeee;
+    margin-bottom: 1.25em;
+  }
+  .cm-heading[cm-level="2"] {
+    padding-bottom: .3em;
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eeeeee;
+    margin-bottom: 1em;
+  }
+  .cm-heading[cm-level="3"] {
+    font-size: 1.5em;
+    line-height: 1.43;
+  }
+  .cm-heading[cm-level="4"] {
+    font-size: 1.25em;
+  }
+  .cm-heading[cm-level="5"] {
+    font-size: 1em;
+    color: #777777;
+  }
+  .cm-heading[cm-level="6"] {
+    font-size: 1em;
+    color: #777777;
+  }
+  .cm-heading .cm-lead {
+    cursor: pointer;
+  }
+}
+
+/* ============================================================== *
+ *  Special item types
+ * ============================================================== */
+
+.CodeMirror {
+  .cm-keyword {
+    color: @keywordColor;
+  }
+  .cm-mode {
+    font-weight: normal;
+  }
+  .cm-propertyname {
+    font-weight: normal;
+    font-style: italic;
+    color: #aaa;
+  }
+  .cm-propertyvalue {
+    font-style: normal;
+  }
+}
+
+/* ============================================================== *
+ *  Modes
+ * ============================================================== */
+
+.CodeMirror {
+  .cm-calc-modecontext,
+  .cm-calc-renderwidget {
+    font-family: @monospaceFont;
+  }
+  .cm-calc-modecontext.cm-heading {
+    font-family: inherit;
+  }
+}
+
+/* ============================================================== *
+ *  Code
+ * ============================================================== */
+
+.CodeMirror {
+  .cm-code,
+  .cm-codeblock,
+  .cm-fencedcode,
+  .cm-fencedcodetopboundary,
+  .cm-fencedcodebottomboundary,
+  .cm-htmlblock {
+    font-family: @codeFontFamily;
+    font-size: @codeFontSize;
+  }
+
+  // inline code
+  .cm-code {
+    background: @codeBackgroundColor;
+    border-top: @codeBorder;
+    border-bottom: @codeBorder;
+  }
+  .cm-hidesyntax .cm-code {
+    border-radius: @codeBorderRadius;
+    border-left: @codeBorder;
+    border-right: @codeBorder;
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+  .cm-hidesyntax .cm-code.cm-currentsyntax {
+    border-radius: 0;
+    padding-left: 0;
+    padding-right: 0;
+    border-left: none;
+    border-right: none;
+  }
+  .cm-code.cm-keyword {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .cm-code.cm-keyword,
+  .cm-hidesyntax .cm-code.cm-currentsyntax.cm-keyword {
+    border-radius: @codeBorderRadius 0 0 @codeBorderRadius;
+    border: @codeBorder;
+    border-right: none;
+  }
+  .cm-code + .cm-code.cm-keyword,
+  .cm-hidesyntax .cm-code + .cm-code.cm-keyword.cm-currentsyntax {
+    border-radius: 0 @codeBorderRadius @codeBorderRadius 0;
+    border: @codeBorder;
+    border-left: none;
+  }
+
+  // fenced code block
+  .cm-fencedcodetopboundary .cm-keyword, .cm-fencedcodebottomboundary .cm-keyword {
+    font-family: @codeFontFamily;
+    color: @keywordColor;
+  }
+  .cm-fencedcodetopboundary-background,
+  .cm-fencedcodebottomboundary-background,
+  .cm-fencedcode-background,
+  .cm-codeblock-background {
+    background-color: @codeBackgroundColor;
+    border: @codeBorder;
+    border-left-width: 2px;
+    border-top: none;
+    border-bottom: none;
+  }
+  .cm-fencedcodetopboundary-background,
+  .cm-codeblock-start-background {
+    border-top: @codeBorder;
+    border-radius: @codeBorderRadius @codeBorderRadius 0 0;
+  }
+  .cm-fencedcodebottomboundary-background,
+  .cm-codeblock-end-background {
+    border-bottom: @codeBorder;
+    border-radius: 0 0 @codeBorderRadius @codeBorderRadius;
+  }
+}
+

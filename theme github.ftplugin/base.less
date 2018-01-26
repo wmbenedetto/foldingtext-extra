@@ -29,15 +29,15 @@
 @codeFontSize: 95%;
 @codeFontFamily: @monospaceFont;
 @codeColor: black;
-@codeBackgroundColor: mix(transparent, @textColor, 98%);
-@codeBorder: 1px solid mix(transparent, @textColor, 93%);
+@codeBackgroundColor: mix(transparent, @textColor, 94%);
+@codeBorder: 1px solid mix(transparent, @textColor, 86%);
 @codeBorderRadius: 6px;
 
 @tagBackgroundColor: @codeBackgroundColor;
 @tagBorder: @codeBorder;
 @tagBorderRadius: @codeBorderRadius;
 
-@interfaceColor: #CC0000;
+@interfaceColor: #de2236;
 @cursorColor: @interfaceColor;
 
 /* ============================================================== *
@@ -66,7 +66,7 @@ body {
     color: rgb(256, 253, 240);
   }
   .cm-text {
-    line-height:1.7;
+    line-height: 1.7;
   }
 }
 
@@ -85,61 +85,61 @@ body {
 pre.cm-unordered,
 pre.cm-ordered {
 
-  padding: 0 0.4em 0.6em 1.8em !important;
+  padding: 0 0.4em 0.4em 1.8em !important;
   line-height: 1.6 !important;
-  margin-left:0 !important;
+  margin-left: 0 !important;
 
   .cm-list-bullet {
     font-size: 1.4em;
     color: #000000 !important;
-    padding-right:0.6em;
+    padding-right: 0.6em;
   }
 
   .cm-lead {
     color: #000000 !important;
-    font-size:1em;
+    font-size: 1em;
   }
 }
 
 pre.cm-unordered[cm-level="1"] {
 
-  padding-left:100px !important;
-  text-indent:-26px !important;
+  padding-left: 100px !important;
+  text-indent: -36px !important;
 
   .cm-list-bullet {
-    opacity:0.8;
+    opacity: 0.8;
   }
 }
 
 pre.cm-unordered[cm-level="2"] {
 
-  padding-left:130px !important;
-  text-indent:-43px !important;
+  padding-left: 130px !important;
+  text-indent: -48px !important;
 
   .cm-list-bullet {
-    opacity:0.6;
+    opacity: 0.6;
   }
 }
 
 pre.cm-ordered[cm-level="3"],
 pre.cm-unordered[cm-level="3"] {
 
-  padding-left:160px !important;
-  text-indent:-56px !important;
+  padding-left: 160px !important;
+  text-indent: -56px !important;
 
   .cm-list-bullet {
-    opacity:0.4;
+    opacity: 0.4;
   }
 }
 
 pre.cm-ordered[cm-level="4"],
 pre.cm-unordered[cm-level="4"] {
 
-  padding-left:190px !important;
-  text-indent:-76px !important;
+  padding-left: 190px !important;
+  text-indent: -76px !important;
 
   .cm-list-bullet {
-    opacity:0.2;
+    opacity: 0.2;
   }
 }
 
@@ -148,15 +148,14 @@ pre.cm-unordered[cm-level="4"] {
  * ============================================================== */
 
 pre.cm-ordered[cm-level="1"] {
-  padding-left:100px !important;
-  text-indent:-28px !important;
+  padding-left: 100px !important;
+  text-indent: -28px !important;
 }
 
 pre.cm-ordered[cm-level="2"] {
-  padding-left:130px !important;
-  text-indent:-40px !important;
+  padding-left: 130px !important;
+  text-indent: -40px !important;
 }
-
 
 /* ============================================================== *
  *  Headings
@@ -321,3 +320,133 @@ pre.cm-ordered[cm-level="2"] {
   }
 }
 
+/* ============================================================== *
+ *  Outline
+ * ============================================================== */
+
+.outlineView .outline-items li {
+
+  color: rgba(49, 178, 202, 0.9);
+  font-size: 0.75em;
+
+  &:hover {
+    color: rgba(96, 223, 239, 0.9);
+  }
+
+  &.level-1:before {
+    content: '' !important;
+  }
+  &.level-2:before {
+    content: '●' !important;
+    font-size: 0.8em;
+    color: #cfcfcf;
+  }
+  &.level-3:before {
+    content: '●' !important;
+    font-size: 0.8em;
+    color: #cfcfcf;
+  }
+  &.level-4:before {
+    content: '●' !important;
+    font-size: 0.8em;
+    color: #cfcfcf;
+  }
+  &.level-5:before {
+    content: '●' !important;
+    font-size: 0.8em;
+    color: #cfcfcf;
+  }
+  &.level-6:before {
+    content: '●' !important;
+    font-size: 0.8em;
+    color: #cfcfcf;
+  }
+  &.level-7:before {
+    content: '●' !important;
+    font-size: 0.8em;
+    color: #cfcfcf;
+  }
+
+  &.level-1 {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: bold;
+    padding: 0 0.5em 0.8em 0;
+  }
+  &.level-2 {
+    padding: 0 0.5em 0.8em 0.8em
+  }
+  &.level-3 {
+    padding: 0 0.5em 0.8em 1em
+  }
+  &.level-4 {
+    padding: 0 0.5em 0.8em 1.2em
+  }
+  &.level-5 {
+    padding: 0 0.5em 0.8em 1.4em
+  }
+  &.level-6 {
+    padding: 0 0.5em 0.8em 1.6em
+  }
+  &.level-7 {
+    padding: 0 0.5em 0.8em 1.8em
+  }
+}
+
+.outlineView {
+  background-color: #1f2026;
+  border-right: 1px solid #0e0e11;
+  padding: 20px 16px 20px 10px;
+}
+
+/* ============================================================== *
+ *  Critic
+ * ============================================================== */
+
+
+.cm-critichighlight {
+
+  background-color: rgba(254, 238, 92, 0.4) !important;
+  color: #eca42a !important;
+
+  &.cm-text:not(.cm-keyword) {
+    padding-left:4px;
+    padding-right:4px;
+  }
+}
+
+.cm-criticinsertion {
+
+  background-color: rgba(82, 236, 156, 0.71) !important;
+  color: #1f9c53 !important;
+
+  &.cm-text:not(.cm-keyword) {
+    padding-left:4px;
+    padding-right:4px;
+  }
+}
+
+.cm-criticdeletion {
+
+  //background-color: rgba(255, 92, 110, 0.87) !important;
+  background: none;
+  border:none;
+  color: #fa475a !important;
+  text-decoration: line-through;
+
+  &.cm-text:not(.cm-keyword) {
+    padding-left:4px;
+    padding-right:4px;
+  }
+}
+
+
+.cm-criticcomment {
+
+  background-color: rgba(82, 120, 147, 0.21) !important;
+  color: #787878 !important; //#666;
+
+  &.cm-text:not(.cm-keyword) {
+    padding-left: 4px;
+    padding-right:4px;
+  }
+}

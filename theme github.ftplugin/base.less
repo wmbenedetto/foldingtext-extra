@@ -74,23 +74,37 @@ body {
  *  Lists
  * ============================================================== */
 
+.cm-unordered .cm-list-bullet,
+.cm-ordered .cm-lead {
+  color: #000000 !important;
+  font-size: 1.4em;
+  line-height: 1.6 !important;
+  padding-right: 0.4em;
+}
+
 pre.cm-unordered,
 pre.cm-ordered {
 
-  padding-left: 1.8em !important;
+  padding: 0 0.4em 0.6em 1.8em !important;
   line-height: 1.6 !important;
-  padding-bottom: .6em !important;
   margin-left:0 !important;
 
   .cm-list-bullet {
+    font-size: 1.4em;
+    color: #000000 !important;
     padding-right:0.6em;
+  }
+
+  .cm-lead {
+    color: #000000 !important;
+    font-size:1em;
   }
 }
 
 pre.cm-unordered[cm-level="1"] {
 
   padding-left:100px !important;
-  text-indent:-36px !important;
+  text-indent:-26px !important;
 
   .cm-list-bullet {
     opacity:0.8;
@@ -100,13 +114,14 @@ pre.cm-unordered[cm-level="1"] {
 pre.cm-unordered[cm-level="2"] {
 
   padding-left:130px !important;
-  text-indent:-48px !important;
+  text-indent:-43px !important;
 
   .cm-list-bullet {
     opacity:0.6;
   }
 }
 
+pre.cm-ordered[cm-level="3"],
 pre.cm-unordered[cm-level="3"] {
 
   padding-left:160px !important;
@@ -117,6 +132,7 @@ pre.cm-unordered[cm-level="3"] {
   }
 }
 
+pre.cm-ordered[cm-level="4"],
 pre.cm-unordered[cm-level="4"] {
 
   padding-left:190px !important;
@@ -127,22 +143,20 @@ pre.cm-unordered[cm-level="4"] {
   }
 }
 
-//.cm-list-bullet {
-//  padding-right:20px;
-//}
-//
-//.cm-unordered:before {
-//  content:'●';
-//  margin-right:.4rem;
-//}
+/* ============================================================== *
+ *  Ordered Lists
+ * ============================================================== */
 
-.cm-unordered .cm-list-bullet,
-.cm-ordered .cm-lead {
-  color: #000000 !important;
-  font-size: 1.4em;
-  line-height: 1.6 !important;
-  padding-right: 0.4em;
+pre.cm-ordered[cm-level="1"] {
+  padding-left:100px !important;
+  text-indent:-28px !important;
 }
+
+pre.cm-ordered[cm-level="2"] {
+  padding-left:130px !important;
+  text-indent:-40px !important;
+}
+
 
 /* ============================================================== *
  *  Headings

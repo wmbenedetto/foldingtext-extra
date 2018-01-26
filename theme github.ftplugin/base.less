@@ -65,25 +65,69 @@ body {
   .cm-selected-text {
     color: rgb(256, 253, 240);
   }
+  .cm-text {
+    line-height:1.7;
+  }
 }
 
 /* ============================================================== *
  *  Lists
  * ============================================================== */
 
-.cm-unordered,
-.cm-ordered {
+pre.cm-unordered,
+pre.cm-ordered {
   padding-left: 1.8em !important;
   line-height: 1.6 !important;
   padding-bottom: .6em !important;
+  margin-left:0 !important;
+  //display:list-item;
+  //list-style-type: circle;
+  //list-style-position: inside;
+
+  .cm-list-bullet {
+    padding-right:0.6em;
+  }
 }
+
+pre.cm-unordered[cm-level="1"] {
+
+  padding-left:100px !important;
+  text-indent:-36px !important;
+}
+
+pre.cm-unordered[cm-level="2"] {
+
+  padding-left:130px !important;
+  text-indent:-48px !important;
+}
+
+pre.cm-unordered[cm-level="3"] {
+
+  padding-left:160px !important;
+  text-indent:-56px !important;
+}
+
+pre.cm-unordered[cm-level="4"] {
+
+  padding-left:190px !important;
+  text-indent:-76px !important;
+}
+
+//.cm-list-bullet {
+//  padding-right:20px;
+//}
+//
+//.cm-unordered:before {
+//  content:'●';
+//  margin-right:.4rem;
+//}
 
 .cm-unordered .cm-list-bullet,
 .cm-ordered .cm-lead {
   color: #000000 !important;
-  font-size: 20px;
+  font-size: 1.4em;
   line-height: 1.6 !important;
-  padding-right: 0.5em;
+  padding-right: 0.4em;
 }
 
 /* ============================================================== *
@@ -95,25 +139,25 @@ body {
   .cm-heading {
     color: #24292e;
     position: relative;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     font-weight: 700;
     line-height: 1.4;
     cursor: text;
   }
   .cm-heading[cm-level="1"] {
-    padding-bottom: .3em;
+    padding-bottom: .3rem;
     font-size: 2.25em;
     line-height: 1.2;
     border-bottom: 1px solid #eeeeee;
-    margin-bottom: 1.25em;
+    margin-bottom: 1.25rem;
   }
   .cm-heading[cm-level="2"] {
-    padding-bottom: .3em;
+    padding-bottom: .3rem;
     font-size: 1.75em;
     line-height: 1.225;
     border-bottom: 1px solid #eeeeee;
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
   }
   .cm-heading[cm-level="3"] {
     font-size: 1.5em;

@@ -1,13 +1,9 @@
-# Basic Theme for FoldingText
+# Sexytime Theme for FoldingText
 
-By [Jamie Kowalski](https://github.com/jamiekowalski)
+By [Warren Benedetto](https://github.com/wmbenedetto)
+
+This theme is inspired by both Github's Markdown style, as well as SublimeText's syntax highlighting. It's readable, colorful, and exceedingly easy on the eyes.
 
 Features:
-
-- Seravek (sans-serif font included with OS X 10.9)
-- Custom styling for `@note`, `@aside`, `@im` and other tags
-- Custom fold graphics
-- Custom cursor
-- Retina (and non-retina) graphics
-
-![Theme Screenshot](assets/theme_screenshot.png?raw=true)
+- Not ugly
+- That is all.
